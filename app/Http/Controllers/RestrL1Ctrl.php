@@ -28,5 +28,14 @@ class RestrL1Ctrl extends Controller
         $emp ->delete();
         return redirect() ->route('index');
     }
+    public function new(){
+        $locs = Location::all();
+        return view('emp_new', compact('locs'));
+    }
+    public function store(Request $request){
+        $data = $request->all();
+        $emp = Employee::create($data);
+        return redirect()->route('index');
+    }
 
 }

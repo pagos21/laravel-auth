@@ -22,3 +22,6 @@ Route::get('/emp/edit/{id}', 'RestrL1Ctrl@edit')->name('emp-edit');
 Route::post('/emp/update/{id}', 'RestrL1Ctrl@update')->name('emp-update');
 
 Route::get('/emp/del/{id}', 'RestrL1Ctrl@del')->name('emp-del');
+
+Route::get('/newEmp', 'RestrL1Ctrl@new')->name('emp-new');
+Route::post('/storeEmp', 'RestrL1Ctrl@store')->name('emp-store');
